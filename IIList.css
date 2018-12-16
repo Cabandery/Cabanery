@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  background-color: #333333;
+  height: 100%;
+  overflow: hidden;
+
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.section  {
+  perspective: 1600px;
+  perspective-origin: center;
+}
+
+
+.labeltext{
+  font-size: 30px;
+font-family: 'Comfortaa', cursive;
+  color: rgba(255, 255, 255, 0.8);
+text-shadow:1px 1px 10px rgba(0,255,255,0.8);
+  z-index: 2;
+}
+
+.subtext{
+  font-size: 20px;
+font-family: 'Comfortaa', cursive;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+.subtext:hover{
+
+  text-shadow:1px 1px 10px rgba(255,255,255,0.8);
+}
+.container {
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+    z-index: 0;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+    transform: translate3d(-100px, 150px,0px);
+      transform-style: preserve-3d;
+}
+
+.containertext {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(30deg) rotateZ(-30deg) rotateY(10deg) translate3d(-100px, 0px,0px);
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+
+.container-origin {
+  transform: rotate(0);
+  transform: translate3d(3.5vw, 0px,0px);
+
+}
+.cardimage {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  transition: 0.7s;
+    margin: 0;
+}
+.card {
+  width: 350px;
+  height: 350px;
+  display: block;
+  overflow: hidden;
+  margin: 0.1cm;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 1vw;
+  position: relative;
+}
+
+.cardtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  transition: 0.3s;
+font-size: 18px;
+font-family: 'Comfortaa', cursive;
+color: rgba(255, 255, 255, 0.8);
+z-index: 3;
+text-decoration: none;
+}
+
+.cardavatar {
+  position: absolute;
+  height: 50px;
+  bottom: 15px;
+  left: -5px;
+  transition: 0.5s;
+  border-radius: 30px;
+  opacity: 0;
+    visibility: collapse;
+}
+
+.cardsubtext {
+  position: absolute;
+  bottom: 15px;
+  left: 80;
+font-size: 15px;
+  transition: 0.1s;
+font-family: 'Comfortaa', cursive;
+color: rgba(255, 255, 255, 0.8);
+z-index: 3;
+opacity: 0;
+  visibility: collapse;
+}
+.card:hover .cardsubtext{
+    visibility: visible;
+    opacity: 100;
+}
+.card:hover .cardtext{
+    visibility: visible;
+    font-size: 20px;
+    bottom: 33px;
+    left: 80;
+}
+.card:hover .cardavatar{
+    visibility: visible;
+    bottom: 15px;
+    left: 15;
+        opacity: 100;
+        z-index: 3;
+}
+
+.card:hover .cardimage{
+  width: 150%;
+  height: 150%;
+  margin: -75;
+  filter:brightness(0.8);
+  filter:blur(0px);
+}
+
+
+
+.cardoverlay{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 2;
+      visibility: hidden;
+}
+
+.card:hover .cardoverlay{
+    visibility: visible;
+        opacity: 100;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: translateZ(3vh) rotateX(-5deg) ;
+  box-shadow: 0 0 120px rgba(147,212,255,0.8);
+  box-shadow: 0 0 120px rgba(147,212,255,0.8);
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 2;
+
+}
+.navbar ul {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ list-style: none;
+ width: 95%;
+ /* whatever width you want can be 100% */
+}
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 3px 8px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: rgba(255,255,255,0.5);
+  color: black;
+  background-color: rgba(50, 50, 50, 0.3);
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+border-radius: 8px;
+}
